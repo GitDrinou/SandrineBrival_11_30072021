@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body {
+    background-color:$color-bg;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 500;
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        max-width: $breakpoints-max-desktop;
+    } 
+}
+
+img {
+    width: 100%;    
+    height: auto;
+}

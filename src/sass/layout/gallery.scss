@@ -1,0 +1,27 @@
+.galleryContainer {
+    margin-top: 43px;
+    background-color: $color-gallery-bg;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 60px;
+    padding: 56px 50px;
+    
+}
+
+.cardContainer {
+    display: flex;
+    align-items: flex-end;
+    border:1px solid red;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-color: $color-primary;
+    padding: 20px;   
+}
+
+.cardContent > span {        
+    font-size: 1.125rem;
+    color: white;
+}

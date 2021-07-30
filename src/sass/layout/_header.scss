@@ -1,0 +1,24 @@
+
+.headContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:40px 100px;   
+    width: 100%;
+    & img {
+        height: 68px;
+        width: auto;
+    } 
+    & .navContainer {
+        display: flex;
+        flex-direction:row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 309px;
+        height: 68px;
+        & > :last-child {
+            margin: 0 0 0 35px;
+        }    
+    }
+}
+
