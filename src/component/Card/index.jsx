@@ -7,10 +7,11 @@ const StyledTitleLink = styled(Link)`
 `
 
 function Card({ title, id }) {
+
     return  (
         <div className="cardContainer">
             <div className="cardContent">
-                <StyledTitleLink to="/location/"><span>{title}</span></StyledTitleLink>
+                <StyledTitleLink to={`/location/${id}`}><span>{title}</span></StyledTitleLink>
             </div>            
         </div>
     )   

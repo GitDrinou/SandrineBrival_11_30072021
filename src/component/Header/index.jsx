@@ -21,29 +21,32 @@ const StyledNavLinkActived = styled(Link)`
 `
 const currentPath = document.location.pathname
 
-function Header() {    
+function Header() {   
     
-    const navHomeLink = currentPath === '/' ? (
-        <StyledNavLinkActived to="/">Accueil</StyledNavLinkActived>
-        ) : (
-            <StyledNavLink to="/">Accueil</StyledNavLink> 
-        )
-    const navAboutLink = currentPath === '/about' ? (
-        <StyledNavLinkActived to="/about">A Propos</StyledNavLinkActived>
-        ) : (
-            <StyledNavLink to="/about">A Propos</StyledNavLink> 
-        )
-
+    let linkHome = <StyledNavLink to="/">Accueil</StyledNavLink>
+    let linkAbout = <StyledNavLink to="/about">A Propos</StyledNavLink>
+    switch (currentPath) {
+        case "/":
+            linkHome = <StyledNavLinkActived to="/">Accueil</StyledNavLinkActived>
+            break;
+        case "/about":
+            linkAbout = <StyledNavLinkActived to="/about">A Propos</StyledNavLinkActived>
+            break;    
+        default:
+            linkHome = <StyledNavLink to="/">Accueil</StyledNavLink>
+            linkAbout = <StyledNavLink to="/about">A Propos</StyledNavLink>
+            break;
+    }
+    
     return (
         
-
         <div className='headContainer'>
             <Link to="/">
                 <img src={HeaderLogo} alt='Kasa' />
             </Link>
             <nav className='navContainer'>
-                {navHomeLink}
-                {navAboutLink}
+                {linkHome}
+                {linkAbout}                
             </nav>
         </div>
     )

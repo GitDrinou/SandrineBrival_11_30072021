@@ -2,7 +2,10 @@
 @import "./base/base";
 
 @import "./layout/header";
-@import "./layout/footer.scss";
-@import "./layout/gallery.scss";
+@import "./layout/footer";
+@import "./layout/gallery";
+@import "./layout/carrousel";
 
 @import "./pages/home";
+@import "./pages/about";
+@import './pages/location'

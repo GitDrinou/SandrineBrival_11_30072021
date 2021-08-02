@@ -1,35 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useFetch } from '../../utils/hooks'
 import Card from '../Card'
 
 function Gallery() {
 
-    const [data, setData] = useState([])
-
-    const getData = () => {
-        fetch('./datas/data.json',
-        { headers : 
-            {
-                'Content-type': 'application/json',
-                'Accept' : 'application/json'
-            }
-        })
-        .then(function(response) {
-            if (response.ok) {
-                response.json().then( function(myJson) {
-                    console.log(myJson)
-                    setData(myJson)
-                })
-            } else {
-                console.log(response.status)
-                const errorMsg = `${response.status} : ${response.statusText}`
-                return <div className='error'>{errorMsg}</div>
-            }
-        })
-    }
-
-    useEffect(() => {
-        getData()
-    }, [])
+    const { data } = useFetch('./datas/data.json')
 
     return (
         <div className="galleryContainer">

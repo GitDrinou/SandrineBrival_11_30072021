@@ -9,8 +9,8 @@ import Location from './pages/Location'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <Header />
+    <Router> 
+      <Header />     
       <Switch>
         <Route exact path="/">
           <Home />
@@ -18,7 +18,7 @@ ReactDOM.render(
         <Route path="/about">
           <About />
         </Route>
-        <Route path="/location">
+        <Route path="/location/:idLocation">
           <Location />
         </Route>
       </Switch>

@@ -1,8 +1,12 @@
+.homeWrapper {
+    margin: 0 100px;
+    width: 100%;
+}
 .homeContainer {
     display: flex;
     flex-direction:column;
     width: 100%;
-    margin:63px 100px;    
+    margin-top:63px;    
 }
 
 .brandContainer {
