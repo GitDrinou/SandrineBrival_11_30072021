@@ -1,12 +1,12 @@
-import StarFull from '../../assets/star-full.svg'
-import StarEmpty from '../../assets/star-empty.svg'
-import 'font-awesome/css/font-awesome.min.css'
+
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 
 function Rating({rating}) {
-    const fullStar = [...Array(rating)].map((star, index) => <i className="full-star fa fa-star " />)
+    const fullStar = [...Array(rating)].map((star, index) => (<FontAwesomeIcon icon={faStar} key={index} size="lg" style={{ color: '#FF6060' }} />))
     const emptyStarNumber = 5-rating
-    const emptyStar = [...Array(emptyStarNumber)].map((star, index) => <img src={StarEmpty} key={index} alt="" />)
+    const emptyStar = [...Array(emptyStarNumber)].map((star, index) => (<FontAwesomeIcon icon={faStar} key={index} size="lg" style={{ color: '#E3E3E3' }} />))
     
     return (
         <div className="ratingList">

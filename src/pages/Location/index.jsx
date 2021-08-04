@@ -1,7 +1,9 @@
 import { useParams } from 'react-router-dom'
 import Carrousel from '../../component/Carrousel'
 import Rating from '../../component/Rating'
+import Description from '../../component/Description'
 import { useFetch } from '../../utils/hooks'
+import Equipment from '../../component/Equipment'
 
 function Location() {
 
@@ -28,17 +30,21 @@ function Location() {
                         </div>                        
                     </div>
                     <div className="location-header-tagsRates">
-                            <div className="tagsList">
-                                <ul>
-                                    { 
-                                        location['tags'].map((tag, index) => (
-                                            <li key={`${index}-${idLocation}`}>{tag}</li>
-                                        ))
-                                    }
-                                </ul>
-                            </div>
-                            <Rating rating={parseInt(location.rating)} />
-                        </div>                  
+                        <div className="tagsList">
+                            <ul>
+                                { 
+                                    location['tags'].map((tag, index) => (
+                                        <li key={`${index}-${idLocation}`}>{tag}</li>
+                                    ))
+                                }
+                            </ul>
+                        </div>
+                        <Rating rating={parseInt(location.rating)} />
+                    </div>  
+                    <div className="location-content">
+                        <Description description={location['description']} />
+                        <Equipment equipment={location['equipments']} />
+                    </div>                
                 </div>
                         
             ))}
