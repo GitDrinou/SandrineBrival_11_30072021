@@ -1,7 +1,6 @@
 import Gallery from '../../component/Gallery'
 
-
-function Home() {
+function Home() {  
     return (
         <div className="homeWrapper">
             <div className='homeContainer'>           

@@ -18,6 +18,7 @@ function Location() {
                     <Carrousel 
                         id = {idLocation}
                         cover = {location.cover}
+                        pictures = {location.pictures}
                     />
                     <div className="location-header">
                         <div className="location-header-info">

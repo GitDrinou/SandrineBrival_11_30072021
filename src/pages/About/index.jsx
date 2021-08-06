@@ -1,9 +1,8 @@
 
 
 function About() {
-    return (
+        return (
         <div className="aboutWrapper">
-            
             <div>Page A Propos</div>
         </div>
         

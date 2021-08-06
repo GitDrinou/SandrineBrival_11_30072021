@@ -7,20 +7,20 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Location from './pages/Location'
 import Error from './pages/Error'
-import { ROUTE_HOME } from './utils/constant/router'
+import { ROUTE_ABOUT, ROUTE_HOME, ROUTE_LOCATION } from './utils/constant/router'
 
-ReactDOM.render(
+ReactDOM.render(  
   <React.StrictMode>
-    <Router> 
-      <Header />     
+    <Router>     
+      <Header />
       <Switch>
         <Route exact path={ROUTE_HOME}>
           <Home />
         </Route>
-        <Route path="/aboutTo">
+        <Route path={ROUTE_ABOUT}>
           <About />
         </Route>
-        <Route path="/location/:idLocation">
+        <Route path={ROUTE_LOCATION}>
           <Location />
         </Route>
         <Route>
