@@ -1,14 +1,14 @@
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {handleClickShow} from '../../utils/function/event'
 
-function Description({description}) {
+function Description({description}) {   
+
     return (
         <div className="descrWrapper">
             <div className="descr-header">
                 <span>Description</span>
-                <FontAwesomeIcon icon={faChevronDown} size="lg" style={{ color: '#FFFFFF' }} />
+                <span id="chevron-descr" className="chevron top" onClick={handleClickShow}></span>
             </div>
-            <div className="descr-content">{description}</div>
+            <div id="descrContent" className="descr-content">{description}</div>
         </div>
     )
 }

@@ -1,8 +1,6 @@
-import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
-
-
+import "react-responsive-carousel/lib/styles/carousel.min.css"
+import { Carousel } from 'react-responsive-carousel'
+import "./carousel.css"
 
 function Carrousel({id, cover, pictures}) {
     let counter = 0
@@ -15,14 +13,19 @@ function Carrousel({id, cover, pictures}) {
             {counter === 1 ? (
                 <img src={cover} alt="Carrousel name" />
             ) : ( 
-                <div className="slideContainer">                    
-                    {pictures.map((picture, index) =>
-                        <div className="slidePicture fade" key={index}>
-                            <img src={picture} alt={picture} />
-                        </div>                        
-                    )}
-                    <FontAwesomeIcon icon={faChevronLeft} size="5x" style={{ color: 'red'}} className="prevArrow" />
-                    <FontAwesomeIcon icon={faChevronRight} size="5x" style={{ color: 'red' }} className="nextArrow" />
+                <div className="slideContainer">  
+                    <Carousel
+                        infiniteLoop={true}
+                        showStatus = {false}
+                        showIndicators = {false}
+                        showThumbs = {false}
+                    >
+                        {pictures.map((picture, index) =>
+                            <div key={id}>
+                                <img src={picture} alt={picture} className="slidePicture" />
+                            </div>                        
+                        )}
+                    </Carousel>
                 </div>
             )}            
         </div>

@@ -1,14 +1,13 @@
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {handleClickShow} from '../../utils/function/event'
 
 function Equipment({equipment}) {
     return (
         <div className="equipWrapper">
             <div className="equip-header">
                 <span>Equipements</span>
-                <FontAwesomeIcon icon={faChevronDown} size="lg" style={{ color: '#FFFFFF' }} />
+                <span id="chevron-equip" className="chevron top" onClick={handleClickShow}></span>
             </div>
-            <div className="equip-content">
+            <div className="equip-content" id="equipContent">
                 <ul>
                     {equipment.map((eq, index) => 
                         <li key={index}>
