@@ -1,5 +1,4 @@
 .homeWrapper {
-    margin: 0 100px;
     width: 100%;
 }
 .homeContainer {
@@ -40,4 +39,31 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+}
+
+@media screen and (min-width: 320px) and (max-width:414px) and (orientation:portrait){
+    .homeWrapper {
+        margin: 0 20px;
+        width: 100%;
+    }    
+    .homeContainer {
+        margin-top:20px;    
+    }
+    .brandContainer {
+        border-radius: 10px;
+        height: 111px;
+        width: 90%;
+        & > h1 {
+            font-size: 1.5rem;
+            left: 10px;
+            top: 20px;
+            line-height: 24px;
+            width: 217px;
+            font-weight: 500;
+        }
+        &::before {
+            background-image: url('/src/assets/background-brand-home-mobile.png');            
+        }
+    }
+
 }

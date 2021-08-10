@@ -10,9 +10,11 @@ function Card({ title, id }) {
 
     return  (
         <div className="cardContainer">
-            <div className="cardContent">
-                <StyledTitleLink to={`/location/${id}`}><span>{title}</span></StyledTitleLink>
-            </div>            
+            <StyledTitleLink to={`/location/${id}`}>
+                <div className="cardContent">
+                    <span>{title}</span>
+                </div>
+            </StyledTitleLink>            
         </div>
     )   
 }

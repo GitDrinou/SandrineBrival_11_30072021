@@ -10,22 +10,14 @@ import Error from './pages/Error'
 import { ROUTE_ABOUT, ROUTE_HOME, ROUTE_LOCATION } from './utils/constant/router'
 
 ReactDOM.render(  
-  <React.StrictMode>
-    <Router>     
-      <Header />
-      <Switch>
-        <Route exact path={ROUTE_HOME}>
-          <Home />
-        </Route>
-        <Route path={ROUTE_ABOUT}>
-          <About />
-        </Route>
-        <Route path={ROUTE_LOCATION}>
-          <Location />
-        </Route>
-        <Route>
-          <Error />
-        </Route>
+    <React.StrictMode>
+      <Router>     
+        <Header />
+        <Switch>
+          <Route exact path={ROUTE_HOME} component={Home} />
+          <Route path={ROUTE_ABOUT} component={About} />
+          <Route path={ROUTE_LOCATION} component={Location} />
+          <Route component={Error} />
       </Switch>
       <Footer />
     </Router>

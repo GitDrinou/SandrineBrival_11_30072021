@@ -12,16 +12,47 @@
 .cardContainer {
     display: flex;
     align-items: flex-end;
-    border:1px solid red;
     width: 300px;
     height: 300px;
     border-radius: 10px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     background-color: $color-primary;
     padding: 20px;   
+    cursor: pointer;
+    position: relative;
 }
 
-.cardContent > span {        
-    font-size: 1.125rem;
-    color: white;
+.cardContent  {
+    position: absolute;
+    height: 100%;
+    width: 88%;
+    top: 0;
+    & > span {    
+        position: absolute;
+        bottom: 20px;  
+        font-size: 1.125rem;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width:414px) and (orientation:portrait){
+    .galleryContainer {
+        margin-top: 20px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        padding: 0;        
+    }
+        
+    .cardContainer {
+        width: 320px;
+        height: 250px;
+        border-radius: 10px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+        background-color: $color-primary;
+        padding: 20px;   
+        cursor: pointer;
+        position: relative;
+    }
 }

@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 
 function Rating({rating}) {
-    const fullStar = [...Array(rating)].map((star, index) => (<FontAwesomeIcon icon={faStar} key={index} size="lg" style={{ color: '#FF6060' }} />))
+    const fullStar = [...Array(rating)].map((star, index) => (<FontAwesomeIcon icon={faStar} key={index} size="lg" className="rates" />))
     const emptyStarNumber = DEFAULT_RATING-rating
-    const emptyStar = [...Array(emptyStarNumber)].map((star, index) => (<FontAwesomeIcon icon={faStar} key={index} size="lg" style={{ color: '#E3E3E3' }} />))
+    const emptyStar = [...Array(emptyStarNumber)].map((star, index) => (<FontAwesomeIcon icon={faStar} key={index} size="lg" className="rates-less" />))
     
     return (
         <div className="ratingList">

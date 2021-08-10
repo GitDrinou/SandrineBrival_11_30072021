@@ -1,6 +1,6 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from 'react-responsive-carousel'
-import "./carousel.css"
+import "../../css/carousel.css"
 
 function Carrousel({id, cover, pictures}) {
     let counter = 0
@@ -11,7 +11,7 @@ function Carrousel({id, cover, pictures}) {
     return (
         <div className="slideWrapper">
             {counter === 1 ? (
-                <img src={cover} alt="Carrousel name" />
+                <img src={cover} alt="Carrousel" />
             ) : ( 
                 <div className="slideContainer">  
                     <Carousel
@@ -21,7 +21,7 @@ function Carrousel({id, cover, pictures}) {
                         showThumbs = {false}
                     >
                         {pictures.map((picture, index) =>
-                            <div key={id}>
+                            <div key={{id}-{index}}>
                                 <img src={picture} alt={picture} className="slidePicture" />
                             </div>                        
                         )}

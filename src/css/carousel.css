@@ -1,6 +1,5 @@
 .carousel .slidePicture {
     border-radius: 25px;
-    width: 100%;
     height: 415px;
     box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, .2);
     object-fit: cover;
@@ -42,4 +41,26 @@
     padding: 14px;
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
+}
+
+@media screen and (min-width: map-get($breakpoints, mobile)){
+    .carousel .slidePicture {
+        border-radius: 10px;
+        height: 255px;
+        width: auto;
+    }
+    .carousel .control-next.control-arrow, .carousel .control-next.control-arrow:hover{
+        right: 10px;
+    }
+    .carousel .control-prev.control-arrow, .carousel .control-prev.control-arrow:hover {
+        left: 10px;
+    }
+    .carousel .control-next.control-arrow:before {
+        border-width: 0 5px 5px 0;
+        padding: 10px;
+    }    
+    .carousel .control-prev.control-arrow:before {
+       border-width: 0 5px 5px 0;
+        padding: 10px;
+    }
 }
