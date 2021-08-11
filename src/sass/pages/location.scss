@@ -128,34 +128,36 @@
 }
 
 .rates{
-    color: $color-primary;
+    height: auto;
 }
 
-.rates-less {
-    color: "#E3E3E3";
-}
 
-@media screen and (min-width: 320px) and (max-width:414px) and (orientation:portrait){
+@media screen and #{map-get($breakpoints, mobile)} and (orientation:portrait){
     .location-header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-end;
+        justify-content: space-between;
         margin-top: 15px;    
-        position: relative;    
+        position: relative;   
     }    
     .location-header-info {
+        text-align: left;
+        width: 100%;
         & > h1 {        
             font-size: 1.125rem;
             font-weight: 500;
             line-height: 25px;
         }   
         & > span {
-            top: 50px;
+            position: relative;
+            top: 5px;
             font-size: 14px;
         }
     }    
     .location-header-tagsRates{
         flex-direction: column;
-        margin-top: 30px;
+        margin-top: -30px;
+            align-items: flex-start;
     }    
     .tagsList {
         width: 100%;
@@ -166,17 +168,64 @@
         }
     }
     .rates{
-        size: "md";
-        color: black;
+        height: 15px;
     }
     .location-header-host {
-        position: absolute;
-        top: 100px;
+        width: 117px;
+        position: relative;
+        top: 60px;
         right: 0;
-        & > img {
-            border-radius: 50%;
-            height: 64px;
-            box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, .2);
+        & > span {
+            padding: 5px;
+            font-size: 12px;
+            line-height: 17px;
         }
+        & > img {
+            height: 32px;
+        }
+    }
+    .location-content {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .descrWrapper, .equipWrapper{
+        width: 100%;        
+        margin-bottom: 20px;
+    }
+    .descrWrapper {
+        margin-top: 20px;
+    }
+    .descr-header, .equip-header {
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+    .descr-content, .equip-content {
+        padding: 10px;
+        font-size: 12px;
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+@media screen and #{map-get($breakpoints, tablet-portrait)}{
+    
+    .location-content {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .descrWrapper, .equipWrapper{
+        width: 100%;        
+        margin-bottom: 20px;
+    }
+}
+@media screen and #{map-get($breakpoints, tablet-landscape)}{
+    
+    .location-content {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .descrWrapper, .equipWrapper{
+        width: 100%;        
+        margin-bottom: 20px;
     }
 }

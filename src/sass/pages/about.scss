@@ -68,3 +68,36 @@
     margin: -32px 120px 10px 120px;
 }
 
+@media screen and #{map-get($breakpoints, mobile)} and (orientation:portrait){
+    .aboutContainer {
+        margin-top:30px;    
+    }
+    .brandContainer-about {
+        border-radius: 10px;
+        height: 223px;
+        width: 100%;
+        object-fit: cover;
+        
+        &::before {
+            background-image: url('/src/assets/background-brand-about-mobile.png');
+        }
+    }
+
+    .reliab-header, .resp-header,
+    .serv-header, .secu-header {
+        padding: 5px 10px;
+        font-size: 13px;
+        margin: 10px 0;
+    }   
+    .reliab-header{        
+        margin-top: 30px;
+    }    
+    .reliab-content, .resp-content,
+    .serv-content, .secu-content {
+        padding: 10px;
+        font-size: 12px;
+        border-radius: 0 0 5px 5px;
+        margin: -10px 0 10px 0;
+    }
+}
+

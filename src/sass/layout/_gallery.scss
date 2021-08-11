@@ -4,7 +4,7 @@
     border-radius: 25px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 60px;
+    grid-gap: 50px;
     padding: 56px 50px;
     
 }
@@ -20,6 +20,7 @@
     padding: 20px;   
     cursor: pointer;
     position: relative;
+    margin-left: 10px;
 }
 
 .cardContent  {
@@ -35,24 +36,25 @@
     }
 }
 
-@media screen and (min-width: 320px) and (max-width:414px) and (orientation:portrait){
+@media screen and #{map-get($breakpoints, mobile)} and (orientation:portrait){
     .galleryContainer {
         margin-top: 20px;
         border-radius: 10px;
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 20px;
-        padding: 0;        
+        padding: 0;     
     }
         
     .cardContainer {
-        width: 320px;
+        width: auto;
         height: 250px;
         border-radius: 10px;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
         background-color: $color-primary;
-        padding: 20px;   
+        padding: 10px;   
         cursor: pointer;
         position: relative;
+        margin-left: 0;        
     }
 }

@@ -1,5 +1,5 @@
-import { useFetch } from '../../utils/hooks'
-import Card from '../Card'
+import { useFetch } from '../utils/hooks'
+import Card from './Card'
 
 function Gallery() {
 

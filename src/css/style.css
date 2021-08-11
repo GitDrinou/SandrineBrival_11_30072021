@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 body {
-  border: 1px solid red;
   margin: 0 auto;
   padding: 0 100px;
   background-color: #E5E5E5;
@@ -10,7 +9,7 @@ body {
 }
 @media screen and (min-width: 320px) and (max-width: 414px) and (orientation: portrait) {
   body {
-    max-width: 441px;
+    max-width: 414px;
     padding: 0 20px;
   }
 }
@@ -39,23 +38,20 @@ body {
   top: 0.4rem;
 }
 
-.chevron.left:before {
-  top: 0;
-  transform: rotate(218deg);
-  height: 2rem;
-  width: 2rem;
-  border-width: 0.5em 0.5em 0 0;
-}
+@media screen and (min-width: 320px) and (max-width:414px) and (orientation: portrait) {
+  .chevron:before {
+    top: 0;
+  }
 
-.chevron.right:before {
-  top: 0;
-  transform: rotate(397deg);
-  color: red;
-  height: 1rem;
-  width: 1rem;
-  left: 100%;
-}
+  .chevron.bottom:before {
+    top: -0.2rem;
+    transform: rotate(135deg);
+  }
 
+  .chevron.top:before {
+    top: 0.2rem;
+  }
+}
 .headContainer {
   display: flex;
   flex-direction: row;
@@ -135,10 +131,10 @@ footer > span {
   margin-top: 30px;
 }
 
-@media screen and (min-width: 320px) and (max-width: 414px) and (orientation: portrait) {
+@media screen and (min-width: 320px) and (max-width:414px) and (orientation: portrait) {
   footer {
-    margin: 60px 20px;
-    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 0;
   }
   footer > img {
     width: 122px;
@@ -155,7 +151,7 @@ footer > span {
   border-radius: 25px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 60px;
+  grid-gap: 50px;
   padding: 56px 50px;
 }
 
@@ -170,6 +166,7 @@ footer > span {
   padding: 20px;
   cursor: pointer;
   position: relative;
+  margin-left: 10px;
 }
 
 .cardContent {
@@ -185,7 +182,7 @@ footer > span {
   color: white;
 }
 
-@media screen and (min-width: 320px) and (max-width: 414px) and (orientation: portrait) {
+@media screen and (min-width: 320px) and (max-width:414px) and (orientation: portrait) {
   .galleryContainer {
     margin-top: 20px;
     border-radius: 10px;
@@ -196,14 +193,15 @@ footer > span {
   }
 
   .cardContainer {
-    width: 320px;
+    width: auto;
     height: 250px;
     border-radius: 10px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     background-color: #FF6060;
-    padding: 20px;
+    padding: 10px;
     cursor: pointer;
     position: relative;
+    margin-left: 0;
   }
 }
 .slideWrapper {
@@ -215,7 +213,20 @@ footer > span {
   flex-direction: column;
   justify-content: center;
 }
+.slideContainer > img {
+  border-radius: 25px;
+  height: 415px;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
 
+@media screen and (min-width: 320px) and (max-width:414px) and (orientation: portrait) {
+  .slideContainer > img {
+    border-radius: 10px;
+    height: 255px;
+    width: auto;
+  }
+}
 .errorWrapper {
   margin: 60px 100px;
   display: flex;
@@ -245,6 +256,27 @@ footer > span {
   line-height: 142.6%;
 }
 
+@media screen and (min-width: 320px) and (max-width:414px) and (orientation: portrait) {
+  .errorWrapper {
+    margin: 250px 0;
+  }
+
+  .errorTitle {
+    color: #FF6060;
+    font-size: 96px;
+    font-weight: bolder;
+  }
+
+  .errorMessage {
+    font-size: 18px;
+    text-align: center;
+    padding: 0 30px;
+  }
+
+  .errorBackLink {
+    font-size: 14px;
+  }
+}
 .homeWrapper {
   width: 100%;
 }
@@ -287,9 +319,8 @@ footer > span {
   background-size: cover;
 }
 
-@media screen and (min-width: 320px) and (max-width: 414px) and (orientation: portrait) {
+@media screen and (min-width: 320px) and (max-width:414px) and (orientation: portrait) {
   .homeWrapper {
-    margin: 0 20px;
     width: 100%;
   }
 
@@ -300,7 +331,6 @@ footer > span {
   .brandContainer {
     border-radius: 10px;
     height: 111px;
-    width: 90%;
   }
   .brandContainer > h1 {
     font-size: 1.5rem;
@@ -383,6 +413,40 @@ footer > span {
   margin: -32px 120px 10px 120px;
 }
 
+@media screen and (min-width: 320px) and (max-width:414px) and (orientation: portrait) {
+  .aboutContainer {
+    margin-top: 30px;
+  }
+
+  .brandContainer-about {
+    border-radius: 10px;
+    height: 223px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .brandContainer-about::before {
+    background-image: url("/src/assets/background-brand-about-mobile.png");
+  }
+
+  .reliab-header, .resp-header,
+.serv-header, .secu-header {
+    padding: 5px 10px;
+    font-size: 13px;
+    margin: 10px 0;
+  }
+
+  .reliab-header {
+    margin-top: 30px;
+  }
+
+  .reliab-content, .resp-content,
+.serv-content, .secu-content {
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 0 0 5px 5px;
+    margin: -10px 0 10px 0;
+  }
+}
 .locationWrapper {
   margin-top: 20px;
   width: 100%;
@@ -513,34 +577,37 @@ footer > span {
 }
 
 .rates {
-  color: #FF6060;
+  height: auto;
 }
 
-.rates-less {
-  color: "#E3E3E3";
-}
-
-@media screen and (min-width: 320px) and (max-width: 414px) and (orientation: portrait) {
+@media screen and (min-width: 320px) and (max-width:414px) and (orientation: portrait) {
   .location-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
+    justify-content: space-between;
     margin-top: 15px;
     position: relative;
   }
 
+  .location-header-info {
+    text-align: left;
+    width: 100%;
+  }
   .location-header-info > h1 {
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 25px;
   }
   .location-header-info > span {
-    top: 50px;
+    position: relative;
+    top: 5px;
     font-size: 14px;
   }
 
   .location-header-tagsRates {
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: -30px;
+    align-items: flex-start;
   }
 
   .tagsList {
@@ -553,19 +620,70 @@ footer > span {
   }
 
   .rates {
-    size: "md";
-    color: black;
+    height: 15px;
   }
 
   .location-header-host {
-    position: absolute;
-    top: 100px;
+    width: 117px;
+    position: relative;
+    top: 60px;
     right: 0;
   }
+  .location-header-host > span {
+    padding: 5px;
+    font-size: 12px;
+    line-height: 17px;
+  }
   .location-header-host > img {
-    border-radius: 50%;
-    height: 64px;
-    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    height: 32px;
+  }
+
+  .location-content {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .descrWrapper, .equipWrapper {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .descrWrapper {
+    margin-top: 20px;
+  }
+
+  .descr-header, .equip-header {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+
+  .descr-content, .equip-content {
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 0 0 5px 5px;
+  }
+}
+@media screen and (max-width:768px) and (orientation:portrait) {
+  .location-content {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .descrWrapper, .equipWrapper {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width:1024px) and (orientation:landscape) {
+  .location-content {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .descrWrapper, .equipWrapper {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 

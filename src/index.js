@@ -9,6 +9,7 @@ import Location from './pages/Location'
 import Error from './pages/Error'
 import { ROUTE_ABOUT, ROUTE_HOME, ROUTE_LOCATION } from './utils/constant/router'
 
+
 ReactDOM.render(  
     <React.StrictMode>
       <Router>     

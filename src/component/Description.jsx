@@ -1,4 +1,4 @@
-import {handleClickShow} from '../../utils/function/event'
+import {handleClickShow} from '../utils/function/event'
 
 function Description({description}) {   
 

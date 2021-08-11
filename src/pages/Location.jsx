@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom'
-import Carrousel from '../../component/Carrousel'
-import Rating from '../../component/Rating'
-import Description from '../../component/Description'
-import { useFetch } from '../../utils/hooks'
-import Equipment from '../../component/Equipment'
+import Carrousel from '../component/Carrousel'
+import Rating from '../component/Rating'
+import Description from '../component/Description'
+import { useFetch } from '../utils/hooks'
+import Equipment from '../component/Equipment'
 
 function Location() {
 

@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body {	
-	border: 1px solid red;
 	margin: 0 auto;
 	padding: 0 100px;
     background-color:$color-bg;
@@ -38,19 +37,15 @@ body {
 	top: 0.4rem;
 }
 
-.chevron.left:before {
-	top: 0;
-	transform: rotate(218deg);
-	height: 2rem;
-	width: 2rem;
-	border-width: 0.5em 0.5em 0 0;
-}
-
-.chevron.right:before {
-	top: 0;
-	transform: rotate(397deg);
-	color: red;
-	height: 1rem;
-	width: 1rem;
-	left: 100%;
+@media screen and #{map-get($breakpoints, mobile)} and (orientation:portrait){
+	.chevron:before{
+		top: 0;
+	}  	
+	.chevron.bottom:before {
+		top: -0.2rem;
+		transform: rotate(135deg);
+	}
+	.chevron.top:before {
+		top: 0.2rem;
+	}
 }

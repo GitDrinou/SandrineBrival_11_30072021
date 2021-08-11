@@ -26,3 +26,24 @@
     color: $color-primary;
     line-height: 142.6%;
 }
+
+@media screen and #{map-get($breakpoints, mobile)} and (orientation:portrait){
+    .errorWrapper {
+        margin: 250px 0;
+    }
+    .errorTitle {
+        color: $color-primary;
+        font-size: 96px;
+        font-weight: bolder;
+    }
+    
+    .errorMessage {
+        font-size: 18px;
+        text-align: center;
+        padding: 0 30px;
+    }
+    .errorBackLink {
+        font-size: 14px;
+    }
+
+}
