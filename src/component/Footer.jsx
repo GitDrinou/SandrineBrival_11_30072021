@@ -1,3 +1,4 @@
+import '../sass/Footer.scss'
 import FooterLogo from '../assets/logo-footer.svg'
 
 function Footer() {

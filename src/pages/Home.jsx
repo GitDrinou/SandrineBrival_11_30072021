@@ -1,3 +1,4 @@
+import '../sass/Home.scss'
 import Gallery from '../component/Gallery'
 
 function Home() {  

@@ -1,5 +1,6 @@
+import '../sass/Location.scss'
 import { useParams } from 'react-router-dom'
-import Carrousel from '../component/Carrousel'
+import Carousel from '../component/Carousel'
 import Rating from '../component/Rating'
 import Description from '../component/Description'
 import { useFetch } from '../utils/hooks'
@@ -15,7 +16,7 @@ function Location() {
         <div className="locationWrapper">
             {myLocation && myLocation.map((location, index) => (
                 <div  key={`${location.title}-${index}`} className="locationContainer">
-                    <Carrousel 
+                    <Carousel 
                         id = {idLocation}
                         cover = {location.cover}
                         pictures = {location.pictures}

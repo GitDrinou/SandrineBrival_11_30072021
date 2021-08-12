@@ -1,3 +1,4 @@
+import '../sass/Gallery.scss'
 import { useFetch } from '../utils/hooks'
 import Card from './Card'
 

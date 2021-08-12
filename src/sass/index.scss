@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+$breakpoints-max-desktop: 1440px;
+$breakpoints-max-mobile: 414px;
+$color-primary:#FF6060;
+$color-bg:#E5E5E5;
+$color-gallery-bg: #F6F6F6;
+
+
+$breakpoints: (
+    mobile: "(min-width: 320px) and (max-width:414px)",
+    tablet-portrait: "(max-width:768px) and (orientation:portrait)",
+    tablet-landscape: "(max-width:1024px) and (orientation:landscape)",
+    desktop: 1025px
+);
+
 body {	
 	margin: 0 auto;
 	padding: 0 100px;
@@ -34,7 +48,7 @@ body {
 	transform: rotate(135deg);
 }
 .chevron.top:before {
-	top: 0.4rem;
+	top: 0.2rem;
 }
 
 @media screen and #{map-get($breakpoints, mobile)} and (orientation:portrait){

@@ -8,7 +8,7 @@ import About from './pages/About'
 import Location from './pages/Location'
 import Error from './pages/Error'
 import { ROUTE_ABOUT, ROUTE_HOME, ROUTE_LOCATION } from './utils/constant/router'
-
+import './sass/index.scss'
 
 ReactDOM.render(  
     <React.StrictMode>

@@ -1,10 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$breakpoints-max-desktop: 1440px;
+$breakpoints-max-mobile: 414px;
+$color-primary:#FF6060;
+$color-bg:#E5E5E5;
+$color-gallery-bg: #F6F6F6;
+
+
+$breakpoints: (
+    mobile: "(min-width: 320px) and (max-width:414px)",
+    tablet-portrait: "(max-width:768px) and (orientation:portrait)",
+    tablet-landscape: "(max-width:1024px) and (orientation:landscape)",
+    desktop: 1025px
+);
+
 footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: black;
-    margin:120px 0;
+    margin-top:100px;
+    margin-bottom: 0;
     height: 200px;
     
    & > img {

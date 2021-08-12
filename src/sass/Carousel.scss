@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$breakpoints-max-desktop: 1440px;
+$breakpoints-max-mobile: 414px;
+$color-primary:#FF6060;
+$color-bg:#E5E5E5;
+$color-gallery-bg: #F6F6F6;
+
+
+$breakpoints: (
+    mobile: "(min-width: 320px) and (max-width:414px)",
+    tablet-portrait: "(max-width:768px) and (orientation:portrait)",
+    tablet-landscape: "(max-width:1024px) and (orientation:landscape)",
+    desktop: 1025px
+);
+
+.slideWrapper { 
+    width: 100%;
+}
+
+ .slideContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    
+      & .slidePicture {
+          width: 100%;
+          border-radius: 25px;
+          height: 415px;
+          box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, .2);
+         object-fit: cover;
+      } 
+ }
+
+@media screen and #{map-get($breakpoints, mobile)} and (orientation:portrait){
+    .slideContainer {
+        & > img {
+            border-radius: 10px;
+            height: 255px;
+            width: auto;
+        }
+    }
+}
+
+
+
+

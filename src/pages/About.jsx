@@ -1,3 +1,4 @@
+import '../sass/About.scss'
 import {handleClickShow} from '../utils/function/event'
 
 function About() {

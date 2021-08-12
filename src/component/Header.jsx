@@ -1,9 +1,8 @@
 import HeaderLogo from '../assets/logo-header.svg'
 import { Link } from 'react-router-dom'
-import '../css/style.css'
 import { ROUTE_ABOUT, ROUTE_HOME } from '../utils/constant/router'
 import { useLocation } from 'react-router-dom'
-//import '../sass/layout/_header.scss'
+import '../sass/Header.scss'
 
 
 function Header() {   
