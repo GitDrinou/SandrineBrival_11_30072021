@@ -1,5 +1,5 @@
 import '../sass/Gallery.scss'
-import { useFetch } from '../utils/hooks'
+import { useFetch } from '../utils/hooks/useFetch'
 import Card from './Card'
 
 function Gallery() {

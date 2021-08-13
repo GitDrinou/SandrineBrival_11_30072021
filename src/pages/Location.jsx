@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import Carousel from '../component/Carousel'
 import Rating from '../component/Rating'
 import Description from '../component/Description'
-import { useFetch } from '../utils/hooks'
+import { useFetch } from '../utils/hooks/useFetch'
 import Equipment from '../component/Equipment'
 
 function Location() {

@@ -9,8 +9,8 @@ $color-gallery-bg: #F6F6F6;
 
 $breakpoints: (
     mobile: "(min-width: 320px) and (max-width:414px)",
-    tablet-portrait: "(max-width:768px) and (orientation:portrait)",
-    tablet-landscape: "(max-width:1024px) and (orientation:landscape)",
+    tabletPortrait: "(max-width:768px) and (orientation:portrait)",
+    tabletLandscape: "(max-width:1024px) and (orientation:landscape)",
     desktop: 1025px
 );
 
@@ -20,11 +20,7 @@ body {
     background-color:$color-bg;
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 500;
-    max-width: $breakpoints-max-desktop;
-	@media screen and (min-width: 320px) and (max-width:414px) and (orientation:portrait){
-        max-width: $breakpoints-max-mobile;
-		padding: 0 20px;
-    } 
+    max-width: $breakpoints-max-desktop;	
 }
 
 
@@ -51,7 +47,11 @@ body {
 	top: 0.2rem;
 }
 
-@media screen and #{map-get($breakpoints, mobile)} and (orientation:portrait){
+@media screen and #{map-get($breakpoints, mobile)} {
+	body {
+        max-width: $breakpoints-max-mobile;
+		padding: 0 20px;
+    } 
 	.chevron:before{
 		top: 0;
 	}  	
@@ -62,4 +62,15 @@ body {
 	.chevron.top:before {
 		top: 0.2rem;
 	}
+}
+
+@media screen and #{map-get($breakpoints, tabletLandscape)} {
+	body {		
+		padding: 0 20px;
+	}   
+}
+@media screen and #{map-get($breakpoints, tabletPortrait)} {
+	body {		
+		padding: 0 40px;
+	}   
 }

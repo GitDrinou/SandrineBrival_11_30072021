@@ -9,8 +9,7 @@ $color-gallery-bg: #F6F6F6;
 
 $breakpoints: (
     mobile: "(min-width: 320px) and (max-width:414px)",
-    tablet-portrait: "(max-width:768px) and (orientation:portrait)",
-    tablet-landscape: "(max-width:1024px) and (orientation:landscape)",
+    tablet: "(max-width:1024px) and (orientation:landscape)",
     desktop: 1025px
 );
 
@@ -18,29 +17,80 @@ $breakpoints: (
     width: 100%;
 }
 
- .slideContainer {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    
-      & .slidePicture {
-          width: 100%;
-          border-radius: 25px;
-          height: 415px;
-          box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, .2);
-         object-fit: cover;
-      } 
- }
+.slideContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & > div {
+        position: relative;
+        height: 100%;
+    }
+}
+
+.slidePicture {
+    width: 100%;
+    border-radius: 25px;
+    height: 415px;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, .2);
+    object-fit: cover;
+} 
+
+.btn-left, .btn-right {
+    position: absolute;
+    background: transparent;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 5rem;
+    padding: 0 2rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+    &:hover {
+        background: rgba(128,128,128,.3);
+    }
+}
+
+.btn-left {
+    left:0;
+}
+.btn-right {
+    right: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+.fadeIn {
+   animation: fadeIn 0.5s;
+}
 
 @media screen and #{map-get($breakpoints, mobile)} and (orientation:portrait){
     .slideContainer {
-        & > img {
+        & .slidePicture {
             border-radius: 10px;
             height: 255px;
-            width: auto;
         }
+    }    
+    .btn-left, .btn-right {
+        font-size: 2.5rem;
+        padding: 0 1rem;
     }
 }
+
+@media screen and #{map-get($breakpoints, tablet)}{
+     
+    .btn-left, .btn-right {
+        font-size: 3rem;
+        padding: 0 1rem;
+    }
+}
+
 
 
 

@@ -9,8 +9,8 @@ $color-gallery-bg: #F6F6F6;
 
 $breakpoints: (
     mobile: "(min-width: 320px) and (max-width:414px)",
-    tablet-portrait: "(max-width:768px) and (orientation:portrait)",
-    tablet-landscape: "(max-width:1024px) and (orientation:landscape)",
+    tabletPortrait: "(max-width:768px) and (orientation:portrait)",
+    tabletLandscape: "(max-width:1024px) and (orientation:landscape)",
     desktop: 1025px
 );
 
@@ -79,5 +79,37 @@ $breakpoints: (
             background-image: url('../assets/background-brand-home-mobile.png');            
         }
     }
+}
 
+@media screen and #{map-get($breakpoints, tabletLandscape)}{
+    
+    .brandContainer {
+        text-align: center;
+        & > h1 {
+            font-size: 2rem; 
+            left: 0;  
+            top: 25%;
+            line-height: 68px;
+            font-weight: 500;
+        }
+        &::before {
+            background-image: url('../assets/background-brand-home-mobile.png');            
+        }
+    }
+}
+
+@media screen and #{map-get($breakpoints, tabletPortrait)}{
+    .brandContainer {
+        text-align: center;
+        & > h1 {
+            font-size: 2rem; 
+            left: 0;  
+            top: 25%;
+            line-height: 68px;
+            font-weight: 500;
+        }
+        &::before {
+            background-image: url('../assets/background-brand-home-mobile.png');            
+        }
+    }
 }
