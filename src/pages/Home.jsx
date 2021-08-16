@@ -1,6 +1,12 @@
 import '../sass/Home.scss'
 import Gallery from '../component/Gallery'
 
+/**
+ * Home component
+ * @returns the home page
+ * using Galeery component
+ */
+
 function Home() {  
     return (
         <div className="homeWrapper">

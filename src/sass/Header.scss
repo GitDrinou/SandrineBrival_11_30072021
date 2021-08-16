@@ -76,13 +76,12 @@ $breakpoints: (
     }
 } 
 
-@media screen and #{map-get($breakpoints, tabletLandscape)}{
+@media screen and #{map-get($breakpoints, tabletPortrait)}, #{map-get($breakpoints, tabletLandscape)}{
     .headContainer {
         & .navContainer {
-            width: 250px;
-            height: 35px;
+            width: 350px;
             & > :last-child {
-                margin: 0 0 0 15px;
+                margin: 0 0 0 40px;
             }    
         } 
     }

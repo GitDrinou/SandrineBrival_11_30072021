@@ -9,8 +9,8 @@ $color-gallery-bg: #F6F6F6;
 
 $breakpoints: (
     mobile: "(min-width: 320px) and (max-width:414px)",
-    tablet-portrait: "(max-width:768px) and (orientation:portrait)",
-    tablet-landscape: "(max-width:1024px) and (orientation:landscape)",
+    tabletPortrait: "(max-width:768px) and (orientation:portrait)",
+    tabletLandscape: "(max-width:1024px) and (orientation:landscape)",
     desktop: 1025px
 );
 
@@ -223,18 +223,7 @@ $breakpoints: (
     }
 }
 
-@media screen and #{map-get($breakpoints, tablet-portrait)}{
-    
-    .location-content {
-        flex-direction: column;
-        margin-top: 20px;
-    }
-    .descrWrapper, .equipWrapper{
-        width: 100%;        
-        margin-bottom: 20px;
-    }
-}
-@media screen and #{map-get($breakpoints, tablet-landscape)}{
+@media screen and #{map-get($breakpoints, tabletPortrait)}, #{map-get($breakpoints, tabletLandscape)}{
     
     .location-content {
         flex-direction: column;

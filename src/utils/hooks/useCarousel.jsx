@@ -1,4 +1,11 @@
-import { useEffect } from "react";
+import { useEffect } from "react"
+
+/**
+ * useCarousel hook
+ * @param {object} currentPicture 
+ * @param {array} pictures 
+ * @returns previous and next element to display
+ */
 
 export const useCerousel = (currentPicture, pictures) => {
     let pictureCounter = 0

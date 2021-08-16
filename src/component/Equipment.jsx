@@ -1,5 +1,12 @@
 import {handleClickShow} from '../utils/function/event'
 
+/**
+ * 
+ * @param {props} equipment  
+ * @returns the location equipements
+ * using handleClickShow function for displaying or not the content. By default content is not displayed.
+ */
+
 function Equipment({equipment}) {
     return (
         <div className="equipWrapper">

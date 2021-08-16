@@ -1,5 +1,12 @@
 import {handleClickShow} from '../utils/function/event'
 
+/**
+ * Description component
+ * @param {props} description
+ * @returns the location description
+ * using handleClickShow function for displaying or not the content. By default content is not displayed.
+ */
+
 function Description({description}) {   
 
     return (

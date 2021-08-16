@@ -1,6 +1,12 @@
 import '../sass/About.scss'
 import {handleClickShow} from '../utils/function/event'
 
+/**
+ * About component
+ * @returns the about page 
+ * using handleClickShow function to display or not the content. By default all block are not diplayed.
+ */
+
 function About() {
         return (
         <div className="aboutWrapper">

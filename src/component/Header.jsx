@@ -4,10 +4,17 @@ import { ROUTE_ABOUT, ROUTE_HOME } from '../utils/constant/router'
 import { useLocation } from 'react-router-dom'
 import '../sass/Header.scss'
 
+/**
+ * Header component
+ * @returns the header of application 
+ * using Link component
+ * using useLocation hooks to define the current pathname
+ * using ROUTE global constant 
+ */
 
 function Header() {   
     const { pathname } = useLocation()
-    console.log({pathname})
+    // use for Debugg : console.log({pathname})
     return (        
         <div className='headContainer'> 
             <Link to={ROUTE_HOME}>

@@ -1,8 +1,13 @@
+/**
+ * handleClickShow function
+ * @param {DOM element} 
+ *  using switch to display the right content
+ */
 
 export function handleClickShow(e) {
     const elt = e.target
     const eltId = elt.getAttribute("id")  
-    console.log(eltId.split('-')[1])  
+    // for Debugg : console.log(eltId.split('-')[1])  
     let txtContent =""
     switch (eltId.split('-')[1]) {
         case "descr":

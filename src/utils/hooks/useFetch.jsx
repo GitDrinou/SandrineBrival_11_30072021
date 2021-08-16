@@ -1,5 +1,10 @@
-
 import { useState, useEffect } from "react"
+
+/**
+ * useFetch hook
+ * @param { string } url 
+ * @returns data from json file
+ */
 
 export function useFetch(url) {
 

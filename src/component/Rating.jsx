@@ -2,7 +2,12 @@ import { DEFAULT_RATING } from '../utils/constant/variables'
 import FullStar from '../assets/star-full.svg'
 import EmptyStar from '../assets/star-empty.svg'
 
-
+/**
+ * Rating component
+ * @param {props} rating 
+ * @returns the illustration location rate
+ * using iteration to display the rignt number of star illustration (full and/or empty star)
+ */
 
 function Rating({rating}) {
 

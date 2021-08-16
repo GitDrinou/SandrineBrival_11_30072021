@@ -9,8 +9,8 @@ $color-gallery-bg: #F6F6F6;
 
 $breakpoints: (
     mobile: "(min-width: 320px) and (max-width:414px)",
-    tablet-portrait: "(max-width:768px) and (orientation:portrait)",
-    tablet-landscape: "(max-width:1024px) and (orientation:landscape)",
+    tabletPortrait: "(max-width:768px) and (orientation:portrait)",
+    tabletLandscape: "(max-width:1024px) and (orientation:landscape)",
     desktop: 1025px
 );
 

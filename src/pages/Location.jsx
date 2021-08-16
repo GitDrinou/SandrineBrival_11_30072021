@@ -1,10 +1,18 @@
 import '../sass/Location.scss'
+import { useFetch } from '../utils/hooks/useFetch'
 import { useParams } from 'react-router-dom'
 import Carousel from '../component/Carousel'
 import Rating from '../component/Rating'
 import Description from '../component/Description'
-import { useFetch } from '../utils/hooks/useFetch'
 import Equipment from '../component/Equipment'
+
+/**
+ * Loaction component
+ * @returns the location details page
+ * using personalized hook useFetch for data
+ * using useParams hooks to get the location id
+ * using Carousel, Rating, Description and Equipment components
+ */
 
 function Location() {
 

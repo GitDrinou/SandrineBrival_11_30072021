@@ -1,6 +1,11 @@
 import '../sass/Footer.scss'
 import FooterLogo from '../assets/logo-footer.svg'
 
+/**
+ * Footer component
+ * @returns the footer of application
+ */
+
 function Footer() {
     return (
         <footer>

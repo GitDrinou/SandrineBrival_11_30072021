@@ -2,6 +2,12 @@ import '../sass/Gallery.scss'
 import { useFetch } from '../utils/hooks/useFetch'
 import Card from './Card'
 
+/**
+ * Gallery component
+ * @returns a list of location card
+ * using personalized hooks useFetch for data to display
+ */
+
 function Gallery() {
 
     const { data } = useFetch('./datas/data.json')

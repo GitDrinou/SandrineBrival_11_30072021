@@ -9,7 +9,8 @@ $color-gallery-bg: #F6F6F6;
 
 $breakpoints: (
     mobile: "(min-width: 320px) and (max-width:414px)",
-    tablet: "(max-width:1024px) and (orientation:landscape)",
+    tabletPortrait: "(max-width:768px) and (orientation:portrait)",
+    tabletLandscape: "(max-width:1024px) and (orientation:landscape)",
     desktop: 1025px
 );
 
@@ -116,7 +117,7 @@ $breakpoints: (
     }
 }
 
-@media screen and #{map-get($breakpoints, tablet)}{
+@media screen and #{map-get($breakpoints, tabletPortrait)},#{map-get($breakpoints, tabletLandscape)} {
     .reliab-header, .resp-header,
     .serv-header, .secu-header {
         padding: 5px 10px;
@@ -135,4 +136,3 @@ $breakpoints: (
         margin: -10px 0 10px 0;
     }
 }
-

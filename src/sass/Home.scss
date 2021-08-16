@@ -81,24 +81,8 @@ $breakpoints: (
     }
 }
 
-@media screen and #{map-get($breakpoints, tabletLandscape)}{
+@media screen and #{map-get($breakpoints, tabletPortrait)},#{map-get($breakpoints, tabletLandscape)}{
     
-    .brandContainer {
-        text-align: center;
-        & > h1 {
-            font-size: 2rem; 
-            left: 0;  
-            top: 25%;
-            line-height: 68px;
-            font-weight: 500;
-        }
-        &::before {
-            background-image: url('../assets/background-brand-home-mobile.png');            
-        }
-    }
-}
-
-@media screen and #{map-get($breakpoints, tabletPortrait)}{
     .brandContainer {
         text-align: center;
         & > h1 {

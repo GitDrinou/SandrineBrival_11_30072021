@@ -1,6 +1,12 @@
 import '../sass/Error.scss'
 import { Link } from 'react-router-dom'
 
+/**
+ * Error component
+ * @returns display 404 error page
+ * using Link component for redirect to Home page
+ */
+
 function Error() {
     return (
         <div className="errorWrapper">
