@@ -1,6 +1,7 @@
 import '../sass/Carousel.scss'
 import { useRef } from 'react'
 import { useCerousel } from '../utils/hooks/useCarousel'
+import PropTypes from 'prop-types'
 
 /**
  * Carousel component
@@ -16,10 +17,7 @@ import { useCerousel } from '../utils/hooks/useCarousel'
 function Carousel({id, cover, pictures}) {
     const currentPicture = useRef(null)
     const { goToPreviousPicture, gotToNextPicture } = useCerousel(currentPicture, pictures)
-    let counter = 0
-    for(let index=0; pictures[index]; index ++) {
-        counter += 1
-    }
+    const counter = pictures.length
     
     return (
         <div className="slideWrapper">
@@ -36,6 +34,12 @@ function Carousel({id, cover, pictures}) {
             </div>        
         </div>
     )
+}
+
+Carousel.propTypes = {
+    id: PropTypes.string.isRequired,
+    cover: PropTypes.string.isRequired,
+    pictures: PropTypes.array.isRequired
 }
 
 export default Carousel

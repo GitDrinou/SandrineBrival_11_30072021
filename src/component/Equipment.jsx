@@ -1,4 +1,5 @@
 import {handleClickShow} from '../utils/function/event'
+import PropTypes from 'prop-types'
 
 /**
  * 
@@ -25,6 +26,10 @@ function Equipment({equipment}) {
             </div>
         </div>
     )
+}
+
+Equipment.propTypes = {
+    equipment: PropTypes.array.isRequired
 }
 
 export default Equipment

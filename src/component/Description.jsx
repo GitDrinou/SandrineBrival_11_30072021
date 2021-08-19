@@ -1,4 +1,5 @@
 import {handleClickShow} from '../utils/function/event'
+import PropTypes from 'prop-types'
 
 /**
  * Description component
@@ -18,6 +19,10 @@ function Description({description}) {
             <div id="descrContent" className="descr-content">{description}</div>
         </div>
     )
+}
+
+Description.propTypes = {
+    description: PropTypes.string.isRequired
 }
 
 export default Description

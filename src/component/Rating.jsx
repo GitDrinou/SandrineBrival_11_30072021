@@ -1,6 +1,7 @@
 import { DEFAULT_RATING } from '../utils/constant/variables'
 import FullStar from '../assets/star-full.svg'
 import EmptyStar from '../assets/star-empty.svg'
+import PropTypes from 'prop-types'
 
 /**
  * Rating component
@@ -21,6 +22,10 @@ function Rating({rating}) {
             {emptyStar}
         </div>
     )
+}
+
+Rating.propTypes = {
+    rating: PropTypes.string.isRequired
 }
 
 export default Rating

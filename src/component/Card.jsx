@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-
+import PropTypes from 'prop-types'
 /**
  * Card component 
  * @param {props} title, id
@@ -20,5 +20,11 @@ function Card({ title, id }) {
         </div>
     )   
 }
+
+Card.propTypes = {
+    title: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired 
+}
+
 
 export default Card
